@@ -1384,30 +1384,6 @@ UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_getNamedItem(
 	const DOMString name);
 
 /*!
- * \brief Adds a new \b Node to the \b NamedNodeMap using the \b Node name
- * attribute.
- *
- * \return The old \b Node if the new \b Node replaces it or \c NULL if the
- * \b Node was not in the \b NamedNodeMap before.
- */
-UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_setNamedItem(
-	/*! The \b NamedNodeMap in which to add the new \b Node. */
-	IXML_NamedNodeMap *nnMap,
-	/*! The new \b Node to add to the \b NamedNodeMap. */
-	IXML_Node *arg);
-
-/*!
- * \brief Removes a \b Node from a \b NamedNodeMap specified by name.
- *
- * \return A pointer to the \b Node, if found, or \c NULL if it wasn't.
- */
-UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_removeNamedItem(
-	/*! The \b NamedNodeMap from which to remove the item. */
-	IXML_NamedNodeMap *nnMap,
-	/*! The name of the item to remove. */
-	const DOMString name);
-
-/*!
  * \brief Retrieves the index_th item in the map. If index is greater than or
  * equal to the number of nodes in this map, this returns \b NULL.
  *
@@ -1419,51 +1395,6 @@ UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_item(
 	IXML_NamedNodeMap *nnMap,
 	/*! [in] The index into the map to remove. */
 	unsigned long index);
-
-/*
- * Introduced in DOM level 2
- */
-
-/*!
- * \brief Retrieves a \b Node from a \b NamedNodeMap specified by namespace
- * URI and local name.
- *
- * \return A pointer to the \b Node, if found, or \c NULL if it wasn't
- */
-UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_getNamedItemNS(
-	/*! The \b NamedNodeMap from which to remove the \b Node. */
-	IXML_NamedNodeMap *nnMap,
-	/*! The namespace URI of the \b Node to remove. */
-	const DOMString *namespaceURI,
-	/*! The local name of the \b Node to remove. */
-	const DOMString localName);
-
-/*!
- * \brief Adds a new \b Node to the \b NamedNodeMap using the \b Node
- * local name and namespace URI attributes.
- *
- * \return The old \b Node if the new \b Node replaces it or \c NULL if the
- * \b Node was not in the \b NamedNodeMap before.
- */
-UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_setNamedItemNS(
-	/*! The \b NamedNodeMap in which to add the \b Node. */
-	IXML_NamedNodeMap *nnMap,
-	/*! The \b Node to add to the map. */
-	IXML_Node *arg);
-
-/*!
- * \brief Removes a \b Node from a \b NamedNodeMap specified by
- * namespace URI and local name.
- *
- * \return A pointer to the \b Node, if found, or \c NULL if it wasn't.
- */
-UPNP_EXPORT_SPEC IXML_Node *ixmlNamedNodeMap_removeNamedItemNS(
-	/*! The \b NamedNodeMap from which to remove the \b Node. */
-	IXML_NamedNodeMap *nnMap,
-	/*! The namespace URI of the \b Node to remove. */
-	const DOMString namespaceURI,
-	/*! The local name of the \b Node to remove. */
-	const DOMString localName);
 
 /*! \brief Frees a \b NamedNodeMap.
  *
